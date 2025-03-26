@@ -1,15 +1,9 @@
-@font-face {
-  font-family: ThirdStreet;
-  font-style: normal;
-  font-weight: 900;
-  src: url(/fonts/ThirdStreetBold-Latin.woff2) format("woff2");
-}
 
 :root {
   --color-bg: #030303;
   --color-primary: #f5eee4;
   --color-secondary: #161616;
-  --color-socials: #8ad1f1;
+  --color-titles: #8ad1f1;
   --color-borders: #202020;
   --color-gradient-1: #3fc9ff;
   --color-gradient-2: #7a1c50;
@@ -73,12 +67,12 @@ h1 h2 article p {
 }
 
 .section-header {
-  font-family: ThirdStreet;
+  font-family: sans;
   font-weight: 100;
   font-size: 2.5em;
   background: linear-gradient(
     to right,
-    var(--color-socials),
+    var(--color-titles),
     var(--color-primary),
     var(--color-primary)
   );
@@ -86,7 +80,7 @@ h1 h2 article p {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 6px var(--color-socials);
+  text-shadow: 0 0 6px var(--color-titles);
   text-transform: uppercase;
   text-decoration: none;
   padding: 0;
@@ -163,7 +157,7 @@ h1 h2 article p {
 }
 
 .glowing-title {
-  font-family: ThirdStreet;
+  font-family: sans;
   font-size: 6em;
   background: linear-gradient(
     to right,
@@ -182,77 +176,6 @@ h1 h2 article p {
   text-shadow: 0 0 6px var(--color-primary);
   margin: 0;
   padding: 0;
-}
-
-.social-icon {
-  color: var(--color-primary);
-  height: 2em;
-  opacity: 0.6;
-  transition: all 0.8s ease;
-}
-
-#socials-container {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2em;
-  gap: 1.5em;
-}
-
-#socials-container a:hover > .social-icon {
-  opacity: 1;
-  color: var(--color-socials);
-}
-
-.scrolling-container {
-  width: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-  grid-auto-rows: 1fr;
-  overscroll-behavior-inline: contain;
-  gap: 1.5rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.scrolling-container > a {
-  height: 100%;
-}
-
-.snaps-inline {
-  scroll-snap-type: inline mandatory;
-}
-
-.snaps-inline > * {
-  scroll-snap-align: start;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  background-color: var(--color-secondary);
-  border-radius: 12px;
-  padding: 2em;
-  margin-bottom: 2em;
-}
-
-.card h2 {
-  padding: 0 0 0.5em 0;
-  margin: 0;
-  font-family: ThirdStreet;
-  color: var(--color-socials);
-  font-size: 1.5em;
-  word-wrap: break-word;
-}
-
-.card article {
-  color: var(--color-primary);
-  padding: 0;
-  margin: 0;
-  font-size: 1em;
-  font-weight: 700;
 }
 
 @media screen and (orientation: portrait) {
@@ -280,16 +203,4 @@ h1 h2 article p {
     font-size: min(2em, 10vw);
   }
 
-  #socials-container {
-    display: inline-block;
-    box-sizing: border-box;
-  }
-
-  #socials-container a {
-    margin-right: 0.6em;
-  }
-
-  .social-icon {
-    margin-top: 0.8em;
-  }
 }

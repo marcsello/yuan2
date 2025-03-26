@@ -1,4 +1,4 @@
-module github.com/17ms/yuan
+module github.com/marcsello/yuan2
 
-go 1.21.0
+go 1.24.0
 
