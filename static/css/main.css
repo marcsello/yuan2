@@ -1,9 +1,9 @@
-
 :root {
   --color-bg: #030303;
   --color-primary: #f5eee4;
   --color-secondary: #161616;
   --color-titles: #8ad1f1;
+  --color-links:rgb(245, 202, 138);
   --color-borders: #202020;
   --color-gradient-1: #3fc9ff;
   --color-gradient-2: #7a1c50;
@@ -31,20 +31,13 @@ body {
     sans-serif;
 }
 
-svg {
-  pointer-events: none;
-}
-
 a {
+  text-decoration: underline;
+  color: var(--color-links);
+}
+
+a:hover {
   text-decoration: none;
-}
-
-p {
-  margin: 0;
-}
-
-h1 h2 article p {
-  pointer-events: none;
 }
 
 .centered {
